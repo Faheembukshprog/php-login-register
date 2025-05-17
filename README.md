@@ -59,3 +59,67 @@ Handles JavaScript logic, like switching between the login and register forms wi
 └───────── 📘 README.md
 The documentation file (you're working on now) that explains the project, how to use it, and how it’s structured.    
 
+
+---
+
+## 🔧 Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   https://github.com/Faheembukshprog/php-login-register.git
+
+ ---
+
+2. Create a MySQL database
+
+    * Name it user_db or update config.php with your custom database name.
+
+3. Create the users table
+Run the following SQL command:
+
+  ```sql
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('admin', 'user') NOT NULL
+);
+  ```
+
+
+4. Update database credentials
+Edit config.php to match your local setup:
+
+```php
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "user_db";
+?>
+```
+5. Run the project
+
+  * Place the project folder in your local server directory (htdocs for XAMPP).
+
+  * Visit: http://localhost/project-folder/
+---
+  
+  
+
+## 👤💻 Author
+GitHub: Faheembukshprog(**#MrMiny**)
+  
+  
+---
+  
+  
+## 📜 🪪 License
+This project is open source and available under the MIT License.
+  
+  
+  
+---
+
+
